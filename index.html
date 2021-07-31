@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey form</title>
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            background-color: rgba(200, 200, 200, 0.4);
+            padding: 50px;
+            font-family: sans-serif;
+        }
+        
+        main {
+            max-width: 700px;
+            width: 100%;
+            margin: auto;
+        }
+        
+        h1 {
+            text-align: center;
+            background-color: #ccc;
+            padding: 40px 0;
+            margin: 0;
+        }
+        
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: white;
+            border-radius: 10px;
+        }
+        
+        form {
+            padding: 20px 40px;
+        }
+        
+        fieldset {
+            padding: 0;
+            margin: 30px 0;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        
+        legend {
+            margin-left: 24px;
+            font-weight: 700;
+        }
+        
+        input {
+            margin: 0;
+        }
+        
+        input,
+        select {
+            font-size: 16px;
+        }
+        
+        p {
+            margin: 0;
+            background-color: #ccc;
+            text-align: center;
+        }
+        
+        textarea {
+            border: none;
+            padding: 5px;
+            width: 95%;
+            outline-style: none;
+            resize: none;
+        }
+        
+        .input-container,
+        select {
+            border: none;
+            padding: 10px;
+            width: calc(100% - 20px);
+            outline-style: none;
+        }
+        
+        button {
+            display: block;
+            padding: 15px 30px;
+            margin: auto;
+            color: white;
+            background-color: #445566;
+            border: none;
+        }
+        
+        button:hover {
+            background-color: #eee;
+            color: black;
+            cursor: pointer;
+        }
+        
+        .radio,
+        .checkbox {
+            padding: 15px;
+        }
+        
+        .radio>div:not(:first-of-type),
+        .checkbox>div:not(:first-of-type) {
+            margin-top: 10px;
+        }
+        
+        [type="checkbox"],
+        [type="radio"] {
+            margin-right: 5px;
+        }
+    </style>
+
+    <main>
+        <div class="container">
+
+
+
+            <h1>FILL FORM</h1>
+
+            <form action="">
+                <div>
+                    <fieldset>
+                        <legend><label for="name">Name</label></legend>
+                        <input type="text" class="input-container"><br>
+                        <p>Enter your full name here</p>
+                    </fieldset>
+
+                </div>
+
+                <fieldset>
+                    <legend>
+                        <label for="email">E-mail</label>
+                    </legend>
+                    <input type="text" class="input-container">
+                    <p>Enter a valid email address</p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        <label for="age">Age</label>
+                    </legend>
+                    <input type="number" min="15" max="60" class="input-container">
+                    <p>How old are you</p>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        <label for="phone">Phone number</label>
+                    </legend>
+                    <input type="text" class="input-container">
+                    <p>Enter your phone number</p>
+
+
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>
+                        <label for="dropdown">Subject</label>
+                    </legend>
+                    <select id="dropdown">
+                        <option value="appointment">appointment</option>
+                        <option value="interviews">interviews</option>
+                        <option value="regarding a post">regarding a post</option>
+                    </select>
+                </fieldset>
+                <fieldset class="radio">
+                    <legend>
+                        <label for="recommendation">Would you recommend our site to a friend?</label> </legend>
+                    <div>
+                        <input id="Definitely" type="radio" name="recommendation" value="definitely">
+                        <label for="definitely">Definitely</label>
+                    </div>
+
+                    <div>
+                        <input id="recommendation" type="radio" name="recommendation" value="maybe">
+                        <label for="maybe">Maybe</label></div>
+                    <div>
+                        <input id="Not sure" type="radio" name="recommendation" value="not sure">
+                        <label for="not sure">Not sure</label></div>
+
+                </fieldset>
+                <fieldset class="checkbox">
+                    <legend> <label for="response">What would you like to see improved? </label></legend>
+
+                    <div>
+                        <input id="Front-end Projects" type="checkbox" value="Front-end Projects">
+                        <label for="Front-end Projects">Front-end Projects</label>
+                    </div>
+                    <div>
+                        <input id="Back-end Projects" type="checkbox" value="Back-end Projects">
+                        <label for="Back-end Projects">Back-end Projects</label>
+                    </div>
+                    <div>
+                        <input id="Data Visualization" type="checkbox" value="Data Visualization">
+                        <label for="Data Visualization">Data Visualization</label></div>
+                    <div>
+                        <input id="Challenges" type="checkbox" value="Challenges">
+                        <label for="Challenges">Challenges</label></div>
+
+
+                </fieldset>
+                <fieldset>
+                    <legend><label for="comments">Comments</label> </legend>
+                    <textarea name="comments" id="" cols="60" rows="10"></textarea>
+                </fieldset>
+                <button>Submit</button>
+
+            </form>
+
+        </div>
+
+
+
+
+    </main>
+
+</body>
+
+</html>
